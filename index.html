@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>COCO</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="addImg">
+        <img src="images/2.png" alt="logo" />
+      </div>
+      <h1 id="h1ElementHeader">Przelicznik walut</h1>
+    </div>
+
+    <div class="content">
+      <input id="inputCurrency" type="number" placeholder="wpisz kwotę" />
+      <select
+        id="currencyValue"
+        class="form-select"
+        aria-label="Default select example"
+      >
+        <option selected>wybierz walutę</option>
+        <option value="USD">USD&emsp;💵</option>
+        <option value="EUR">EUR&emsp;💶</option>
+        <option value="CHF">CHF&emsp;💴</option>
+      </select>
+    </div>
+    <button id="getCurrencies">przelicz</button>
+    <div id="loader"></div>
+    <div>
+      <h2 id="negativeValueOfTheNumber"></h2>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

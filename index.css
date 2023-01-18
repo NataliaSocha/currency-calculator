@@ -1,0 +1,98 @@
+body {
+  background-image: url(images/hell.jpg);
+  background-size: cover;
+  max-width: max-content;
+  margin: auto;
+}
+:root {
+  --border-color-inputs: pink;
+  --background-inputs: #f0fff0;
+  --text-color: #800080;
+}
+.addImg {
+  display: block;
+  margin-left: -25px;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
+}
+.addImg:hover {
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.1);
+}
+#h1ElementHeader {
+  color: var(--text-color);
+  text-align: center;
+  text-shadow: 2px 2px 8px rgb(253, 112, 135);
+  margin-top: 60px;
+}
+#inputCurrency {
+  width: 120px;
+  height: 29px;
+  margin-bottom: 20px;
+  border: 2px solid var(--border-color-inputs);
+  background-color: var(--background-inputs);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: var(--text-color);
+  outline: none;
+  font-weight: 550;
+}
+#inputCurrency:focus,
+.form-select:focus,
+#getCurrencies:focus {
+  border-color: rgb(170, 82, 170);
+}
+.form-select {
+  width: 120px;
+  height: 35px;
+  color: var(--text-color);
+  border: 2px solid var(--border-color-inputs);
+  background-color: var(--background-inputs);
+  margin-left: auto;
+  margin-right: auto;
+  outline: none;
+  font-weight: 550;
+}
+#getCurrencies {
+  height: 32px;
+  border: 2px solid var(--border-color-inputs);
+  background-color: var(--background-inputs);
+  margin-left: auto;
+  margin-right: auto;
+  width: 130px;
+  cursor: pointer;
+  font-weight: 550;
+  color: var(--text-color);
+  outline: none;
+}
+#getCurrencies:hover {
+  background-color: rgb(247, 190, 247);
+}
+#negativeValueOfTheNumber {
+  color: var(--text-color);
+}
+#loader {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #d1f8ff;
+  border-top: 6px solid #f56ef5;
+  border-radius: 100%;
+  margin: auto;
+  visibility: hidden;
+  animation: spin 1s infinite linear;
+  margin-top: 10px;
+}
+#loader.display {
+  visibility: visible;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
