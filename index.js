@@ -15,7 +15,7 @@ async function loadData() {
   preloaderOn();
   try {
     const data = await fetch(
-      "http://api.nbp.pl/api/exchangerates/tables/A/?format=json%22"
+      "https://api.nbp.pl/api/exchangerates/tables/A/?format=json%22"
     );
     return await data.json();
   } catch (err) {
@@ -25,7 +25,7 @@ async function loadData() {
   }
 }
 btn.addEventListener("click", () => {
-  loadData("http://api.nbp.pl/api/exchangerates/tables/A/?format=json%22").then(
+  loadData("https://api.nbp.pl/api/exchangerates/tables/A/?format=json%22").then(
     (data) => {
       const cash = data[0].rates;
       const selectList = document.querySelector(".form-select");
