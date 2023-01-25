@@ -4,35 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>COCO</title>
-    <link rel="stylesheet" href="index.css" />
+    <title>Przelicznik walut</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="header">
+    <header>
       <div class="addImg">
         <img src="images/2.png" alt="logo" />
       </div>
-      <h1 id="h1ElementHeader">Przelicznik walut</h1>
-    </div>
-
+      <h1 class="h1ElementHeader">Przelicznik walut</h1>
+    </header>
+    <section>
     <div class="content">
-      <input id="inputCurrency" type="number" placeholder="wpisz kwotę" />
+      <input id="inputCurrency" class= "inputCurrency" type="number" placeholder="wpisz kwotę" />
       <select
         id="currencyValue"
         class="form-select"
         aria-label="Default select example"
       >
         <option selected>wybierz walutę</option>
-        <option value="USD">USD&emsp;💵</option>
-        <option value="EUR">EUR&emsp;💶</option>
-        <option value="CHF">CHF&emsp;💴</option>
+        <option value="USD"><span class="currency">USD<span>💵</option>
+        <option value="EUR"><span class="currency">EUR<span>💶</option>
+        <option value="CHF"><span class="currency">CHF<span>💴</option>
       </select>
     </div>
-    <button id="getCurrencies">przelicz</button>
-    <div id="loader"></div>
-    <div>
-      <h2 id="negativeValueOfTheNumber"></h2>
-    </div>
+  </section>
+  <section>
+    <button id="getCurrencies" class="getCurrencies" >przelicz</button>
+    <div id="loader" class="loader"></div>
+      <h2 id="negativeValueOfTheNumber" class="negativeValueOfTheNumber"></h2>
+    </section>
 
     <script src="index.js"></script>
   </body>

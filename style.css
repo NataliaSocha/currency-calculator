@@ -10,7 +10,6 @@ body {
   --text-color: #800080;
 }
 .addImg {
-  display: block;
   margin-left: -25px;
   margin-right: auto;
   width: 200px;
@@ -21,13 +20,13 @@ body {
   -webkit-transform: scale(1.2);
   transform: scale(1.1);
 }
-#h1ElementHeader {
+.h1ElementHeader {
   color: var(--text-color);
   text-align: center;
   text-shadow: 2px 2px 8px rgb(253, 112, 135);
   margin-top: 60px;
 }
-#inputCurrency {
+.inputCurrency {
   width: 120px;
   height: 29px;
   margin-bottom: 20px;
@@ -40,9 +39,9 @@ body {
   outline: none;
   font-weight: 550;
 }
-#inputCurrency:focus,
+.inputCurrency:focus,
 .form-select:focus,
-#getCurrencies:focus {
+.getCurrencies:focus {
   border-color: rgb(170, 82, 170);
 }
 .form-select {
@@ -56,7 +55,8 @@ body {
   outline: none;
   font-weight: 550;
 }
-#getCurrencies {
+
+.getCurrencies {
   height: 32px;
   border: 2px solid var(--border-color-inputs);
   background-color: var(--background-inputs);
@@ -68,13 +68,13 @@ body {
   color: var(--text-color);
   outline: none;
 }
-#getCurrencies:hover {
+.getCurrencies:hover {
   background-color: rgb(247, 190, 247);
 }
-#negativeValueOfTheNumber {
+.negativeValueOfTheNumber {
   color: var(--text-color);
 }
-#loader {
+.loader {
   width: 40px;
   height: 40px;
   border: 5px solid #d1f8ff;
@@ -85,7 +85,7 @@ body {
   animation: spin 1s infinite linear;
   margin-top: 10px;
 }
-#loader.display {
+.loader.display {
   visibility: visible;
 }
 @keyframes spin {
