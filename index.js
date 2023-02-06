@@ -1,5 +1,8 @@
 const btn = document.querySelector("#getCurrencies");
 const preloader = document.querySelector("#loader");
+const selectList = document.querySelector(".form-select");
+const input = document.querySelector("#inputCurrency");
+const addPositiveValue = document.querySelector("#negativeValueOfTheNumber");
 
 function preloaderOn() {
   preloader.classList.add("display");
@@ -7,6 +10,7 @@ function preloaderOn() {
     preloader.classList.remove("display");
   }, 5000);
 }
+
 function preloaderOff() {
   preloader.classList.remove("display");
 }
@@ -24,16 +28,12 @@ async function loadData() {
     preloaderOff();
   }
 }
+
 btn.addEventListener("click", () => {
   loadData(
     "https://api.nbp.pl/api/exchangerates/tables/A/?format=json%22"
   ).then((data) => {
     const cash = data[0].rates;
-    const selectList = document.querySelector(".form-select");
-    const input = document.querySelector("#inputCurrency");
-    const addPositiveValue = document.querySelector(
-      "#negativeValueOfTheNumber"
-    );
     if (input.value < 0) {
       return (addPositiveValue.innerHTML = "wpisz wartość dodatnią");
     }

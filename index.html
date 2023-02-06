@@ -9,30 +9,39 @@
   </head>
   <body>
     <header>
-      <div class="addImg">
-        <img src="images/2.png" alt="logo" />
+      <div class="header">
+        <div class="addImg">
+          <img src="images/2.png" alt="logo" />
+        </div>
+        <h1 class="h1ElementHeader">Przelicznik walut</h1>
       </div>
-      <h1 class="h1ElementHeader">Przelicznik walut</h1>
     </header>
     <section>
-    <div class="content">
-      <input id="inputCurrency" class= "inputCurrency" type="number" placeholder="wpisz kwotę" />
-      <select
-        id="currencyValue"
-        class="form-select"
-        aria-label="Default select example"
-      >
-        <option selected>wybierz walutę</option>
-        <option value="USD"><span class="currency">USD</span>💵</option>
-        <option value="EUR"><span class="currency">EUR</span>💶</option>
-        <option value="CHF"><span class="currency">CHF</span>💴</option>
-      </select>
-    </div>
-  </section>
-  <section>
-    <button id="getCurrencies" class="getCurrencies" >przelicz</button>
-    <div id="loader" class="loader"></div>
-      <h2 id="negativeValueOfTheNumber" class="negativeValueOfTheNumber"></h2>
+      <div class="content">
+        <input
+          id="inputCurrency"
+          class="inputCurrency"
+          type="number"
+          placeholder="wpisz kwotę"
+        />
+        <select
+          id="currencyValue"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option selected>wybierz walutę</option>
+          <option value="USD"><span class="currency">USD</span>💵</option>
+          <option value="EUR"><span class="currency">EUR</span>💶</option>
+          <option value="CHF"><span class="currency">CHF</span>💴</option>
+        </select>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <button id="getCurrencies" class="getCurrencies">przelicz</button>
+        <div id="loader" class="loader"></div>
+        <p id="negativeValueOfTheNumber" class="negativeValueOfTheNumber"></p>
+      </div>
     </section>
 
     <script src="index.js"></script>
