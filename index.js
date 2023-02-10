@@ -6,9 +6,6 @@ const addPositiveValue = document.querySelector("#negativeValueOfTheNumber");
 
 function preloaderOn() {
   preloader.classList.add("display");
-  setTimeout(() => {
-    preloader.classList.remove("display");
-  }, 5000);
 }
 
 function preloaderOff() {
@@ -30,9 +27,7 @@ async function loadData() {
 }
 
 btn.addEventListener("click", () => {
-  loadData(
-    "https://api.nbp.pl/api/exchangerates/tables/A/?format=json%22"
-  ).then((data) => {
+  loadData().then((data) => {
     const cash = data[0].rates;
     if (input.value < 0) {
       return (addPositiveValue.innerHTML = "wpisz wartość dodatnią");
